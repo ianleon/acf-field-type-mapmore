@@ -179,11 +179,11 @@ class acf_field_mapmore extends acf_field {
 		$controls_id 				= 'controls-' 	. esc_attr($field['key']);		# Map controls unique identifier
 		$map_id_js					= esc_attr($field['key']);						# Map unique identifier used in js
 		$field_name 				= esc_attr($field['name']);
-
+		$field_value = $field['value'];
 		?>
 
 		<div class="acf-hidden">
-			<input type="hidden" name="<?php echo $field_name ?>" value="<?php echo esc_attr( json_encode( $field['value'] ) ); ?>">
+			<input type="hidden" name="<?php echo $field_name ?>" value="<?php echo esc_attr( $field_value ); ?>">
 		</div>
 
 		<script type="text/javascript">
@@ -191,11 +191,11 @@ class acf_field_mapmore extends acf_field {
 
 			var locations<?= $map_id_js ?> = [];
 
-			<?php if ( !empty($field['value']) ) : ?>
+			<?php if ( !empty( $field_value ) ) : ?>
 
 				<?php if ( json_last_error() === JSON_ERROR_NONE ) : ?>
 
-					locations<?= $map_id_js ?> = JSON.parse(<?= json_encode( $field['value'] ) ?>);
+					locations<?= $map_id_js ?> = JSON.parse('<?= $field_value ?>');
 
 				<?php endif; ?>
 
