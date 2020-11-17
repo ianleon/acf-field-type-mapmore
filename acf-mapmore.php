@@ -1,12 +1,10 @@
 <?php
 
 /*
-Plugin Name: Advanced Custom Fields: MapMore
-Plugin URI: https://bitterend.io
+Plugin Name: Advanced Custom Fields: MapMore - Modified by Ian Leon at TRIBUS
 Description: Map complex field for Advanced Custom Fields
-Version: 1.0.1
-Author: bitterend
-Author URI: https://bitterend.io
+Version: 1.1
+Author: bitterend - Modified by Ian Leon at TRIBUS
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
